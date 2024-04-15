@@ -5,15 +5,15 @@
     export default{
         name: 'AppCards',
 
-        components:{
+        components: {
             Card,
         },
         data(){
             return {
-                store: store,
+                store
             };
         },
-    };
+    }
 
 </script>
 

@@ -1,9 +1,10 @@
 <script>
-
-  import AppHeader from './components/AppHeader.vue';
-  import AppCards from './components/AppCards.vue';
+  
   import { store } from "./store.js";
 	import axios from 'axios';
+  import AppHeader from './components/AppHeader.vue';
+  import AppCards from './components/AppCards.vue';
+  
 
   export default {
     components: {
@@ -11,6 +12,7 @@
       AppCards,
     },
     methods: {
+
       getCartaFromApi(){
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
           .then(response => {
@@ -20,6 +22,7 @@
             console.error('Si è verificato un errore:', error);
           });
         },
+
       },
     mounted() {
       this.getCartaFromApi();

@@ -11,7 +11,7 @@
 
     <div class="ms-col">
         <div class="card d-flex justify-content-center align-items-center" style="width: 12rem">
-            <img :src="carta.card_images[0].image_url" class="card-img-top" alt="...">
+            <img :src="carta.card_images.image_url" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ carta.name }}</h5>
                 <p class="card-text">{{ carta.archetype }}</p>
