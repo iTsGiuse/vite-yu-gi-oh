@@ -8,7 +8,7 @@
 
 <template>
 
-    <div class="container">
+    <div class="container text-center">
         <h1>Yu-Gi-Oh Api</h1>
     </div>
 
