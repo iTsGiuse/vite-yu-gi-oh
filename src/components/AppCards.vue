@@ -1,17 +1,28 @@
 <script>
+    import { store } from '../store.js';
+    import Card from './Card.vue';
+
     export default{
-        name: 'AppCards'
-    }
+        name: 'AppCards',
+
+        components:{
+            Card,
+        },
+        data(){
+            return {
+                store: store,
+            };
+        },
+    };
 
 </script>
-
 
 <template>
 
     <div class="container">
         <div class="container p-5">
-            <div class="row">
-                
+            <div class="row flex-wrap">
+                <Card v-for="carta in store.carte" :key="carta.id" :card="carta"></Card> 
             </div>
         </div>
     </div>
@@ -28,6 +39,11 @@
         .container:nth-last-child(1){
             width: 800px !important;
             background-color: black !important;
+
+            .row{
+                width: 100% !important;
+
+            }
         }
     }
 
