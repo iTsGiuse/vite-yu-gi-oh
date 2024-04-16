@@ -14,7 +14,7 @@
             <img :src="carta.card_images[0].image_url" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ carta.name }}</h5>
-                <p class="card-text">{{ carta.archetype }}</p>
+                <p class="card-text">{{ carta.archetype || 'Non definito' }}</p>
             </div>
         </div>
     </div>

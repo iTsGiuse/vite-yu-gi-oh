@@ -9,12 +9,20 @@
   export default {
     components: {
       AppHeader,
-      AppCards,
+      AppCards
     },
     data (){
       store
     },
     methods: {
+      
+      getArchetypeFromApi(){
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+          .then(response => {
+            store.archetype = response.data;
+          })
+      },
+
 
       getCartaFromApi(){
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
@@ -26,6 +34,7 @@
       },
     mounted() {
       this.getCartaFromApi();
+      this.getArchetypeFromApi();
     }, 
   }
 </script>
