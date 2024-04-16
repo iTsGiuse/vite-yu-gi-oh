@@ -4,6 +4,7 @@
 
     export default {
         name: 'AppSearch',
+        
         data(){
             return {
                 store
@@ -15,9 +16,9 @@
 
 <template>
 
-    <select> 
+    <select v-model="store.carteFiltrate" @change="$emit('filterCarte')"> 
         <option value="" selected>Seleziona un Archetype</option>
-        <option v-for="tipo in store.archetype" :value=" tipo.archetype_name"> {{ tipo.archetype_name }} </option>
+        <option v-for="tipo in store.archetype" :value="tipo.archetype_name"> {{ tipo.archetype_name }} </option>
     </select>
 
 </template>
