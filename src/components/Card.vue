@@ -10,11 +10,11 @@
 <template>
 
     <div class="ms-col">
-        <div class="card d-flex justify-content-center align-items-center mb-5" >
+        <div class="card mb-5" style="height: 400px">
             <img :src="carta.card_images[0].image_url" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{ carta.name }}</h5>
-                <p class="card-text">{{ carta.archetype || 'Non definito' }}</p>
+                <h5 class="card-title text-center mb-3" >{{ carta.name }}</h5>
+                <p class="card-text text-center">{{ carta.archetype ?? 'Non definito' }}</p>
             </div>
         </div>
     </div>
