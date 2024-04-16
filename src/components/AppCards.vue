@@ -19,10 +19,10 @@
 
 <template>
 
-    <div class="container">
+    <div class="container p-5">
         <div class="container p-5">
             <div class="row flex-wrap">
-                <Card v-for="carta in store.carte" :key="carta.id" :card="carta"></Card> 
+                <Card v-for="carta in store.carte" :key="carta.id" :carta="carta"></Card> 
             </div>
         </div>
     </div>
@@ -33,12 +33,11 @@
 <style scoped lang="scss">
 
     .container:nth-child(1){
-        width: 1200px !important;
         background-color: orange !important;
 
         .container:nth-last-child(1){
-            width: 800px !important;
-            background-color: black !important;
+            width: 90% !important;
+            background-color: white !important;
 
             .row{
                 width: 100% !important;

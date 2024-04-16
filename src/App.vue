@@ -11,6 +11,9 @@
       AppHeader,
       AppCards,
     },
+    data (){
+      store
+    },
     methods: {
 
       getCartaFromApi(){
@@ -18,9 +21,6 @@
           .then(response => {
             store.carte = response.data.data;
           })
-          .catch(error => {
-            console.error('Si è verificato un errore:', error);
-          });
         },
 
       },
