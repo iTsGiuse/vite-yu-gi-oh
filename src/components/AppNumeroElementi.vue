@@ -1,7 +1,15 @@
 <script>
 
+    import { store } from '../store.js';
+
     export default{
-        name: 'AppNumeroElementi'
+        name: 'AppNumeroElementi',
+
+        data(){
+            return{
+                store
+            };
+        },
     }
 
 </script>
@@ -10,11 +18,11 @@
 <template>
 
     <div class="black">
-        <p>Il numero di carte filtrate è: </p>
+        <p>Il numero di carte è: {{ store.carte.length }}</p>
     </div>
 
 </template>
-
+ 
 
 <style scoped lang="scss">
 
@@ -24,6 +32,7 @@
 
         p{
             color: white;
+            font-size: 23px;
         }
     }
 
