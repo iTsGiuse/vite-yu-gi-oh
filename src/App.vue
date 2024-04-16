@@ -43,7 +43,12 @@
       },
 
       getFilterApi(){
-        this.parametri.archetype = store.carteFiltrate;
+        
+        if (store.carteFiltrate !== ""){
+					this.parametri.archetype = store.carteFiltrate;
+				} else {
+					delete this.parametri.archetype
+				};
         
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', { params: this.parametri })
           .then(response => {
